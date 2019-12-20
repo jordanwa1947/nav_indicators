@@ -1,2 +1,7 @@
 var navLinks = document.getElementById('nav-link-list');
-console.log(navLinks);
+
+navLinks.addEventListener('click', indicateClick);
+
+function indicateClick() {
+  event.target.classList.add('selected');
+}
