@@ -23,6 +23,10 @@ header {
   padding: 10px 0px 0px 30px;
 }
 
+main {
+  padding: 25px;
+}
+
 .page-title {
   margin: 40px 20px 15px 0px;
 }
@@ -40,4 +44,12 @@ header {
 
 .selected {
   border-bottom: 5px solid rgb(216, 217, 218);
+}
+
+.text {
+  width: 50%;
+}
+
+.text-header {
+  margin-bottom: 20px;
 }
