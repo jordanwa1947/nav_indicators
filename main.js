@@ -10,20 +10,27 @@ function indicateClick() {
     }
   }
   event.target.classList.add('selected');
-  changePageContent(event.target.innerText);
+  customizePageContent(event.target.innerText);
 }
 
-function changePageContent(linkText) {
+function customizePageContent(linkText) {
+  switch(linkText) {
+    case 'All Courses':
+console.log(linkText);
+    break;
+    case 'Collections':
+console.log(linkText);
+    break;
+    case 'Wishlist':
+console.log(linkText);
+    break;
+    case 'Archived':
+console.log(linkText);
+    break;
+  }
+}
+
+function changePageContent(linkText, pageContent) {
   var pageBody = document.querySelector('main');
-  pageBody.innerHTML = `<h2>${linkText}</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
-  </p>
-  `
+  pageBody.innerHTML = `<h2>${linkText}</h2> ${pageContent}`
 }
